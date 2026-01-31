@@ -4,7 +4,8 @@
 
 ## Dependencies
 
-- Ruby
+- Ruby (for macOS/Linux)
+- Python (for Windows)
 - Pandoc
 - weasyprint
 - shellcheck
@@ -19,7 +20,7 @@
 address:
   - "1234 Main St."
   - "City, State ZIP"
-firsname: "John"
+firstname: "John"
 lastname: "Doe"
 byline: "John Doe"
 title: "The Title of Your Story"
@@ -41,7 +42,20 @@ The application order of metadata is:
 metadata.yaml < inputs/<filename>.md
 ```
 
-4. Run `bin/prepare <filename>` to generate a PDF of your manuscript. The PDF will be saved in the `outputs` directory, as `<filename>.pdf`.
+### macOS / Linux
+
+4. Run `bin/prepare <filename>` to generate a PDF of your manuscript.
+
+### Windows
+
+**Requirements:**
+- Python 3.8+
+- install dependencies: `pip install -r requirements.txt`
+- [GTK3 Runtime for Windows](https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases) (Required for PDF generation)
+
+4. Run `.\bin\prepare.ps1 <filename>` to generate a PDF.
+
+The PDF will be saved in the `outputs` directory, as `<filename>.pdf`.
 
 ## Testing
 

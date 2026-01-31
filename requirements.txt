@@ -1,0 +1,3 @@
+PyYAML
+weasyprint==60.2
+pydyf==0.10.0
